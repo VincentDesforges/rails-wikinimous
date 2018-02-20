@@ -1,7 +1,11 @@
 <%= form_for(@article) do |a| %>
-  <%= a.label :title %>
-  <%= a.text_field :title %>
-  <%= a.label :content %>
-  <%= a.text_field :content %>
-  <%= a.submit %>
+  <div class="form-group">
+    <%= a.label :title %>
+    <%= a.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= a.label :content %>
+    <%= a.text_area :content, class: "form-control" %>
+  </div>
+  <%= a.submit 'Submit!', :class => 'btn btn-default'%>
 <% end %>
